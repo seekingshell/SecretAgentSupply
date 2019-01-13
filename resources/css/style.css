@@ -1,3 +1,4 @@
+/* Universal Styles */
 html {
   font-size: 18px;
 }
@@ -8,13 +9,13 @@ body {
   color: white;
 }
 
-/* Universal Styles */
 .nav-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
+/* Header */
 header {
   width: 100%;
 }
@@ -27,22 +28,19 @@ header {
   background-color: black;
 }
 
+.logo .site-container {
+  display: flex;
+  align-items: center;
+  padding: 0.66rem 0 0.66rem 0.5rem;
+}
+
 .logo img {
-  display: inline-block;
-  align-self: center;
   height: 1.5rem;
-  padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
-.logo-title {
-  display: inline-block;
-  padding-top: 0.66rem;
-  padding-bottom: 0.66rem;
-}
-
 /* New Arrival Section */
-.header-main {
+.main-banner {
   display: flex;
   justify-content: center;
   background: url("../images/moto.jpeg") center;
@@ -50,26 +48,23 @@ header {
   height: 25rem;
 }
 
-.new-arrival-content {
-  align-self: flex-start;
+.headline {
   background-color: black;
-  width: 25rem;
-  margin-top: 9rem;
+  width: 20rem;
+  position: relative;
+  top: 9rem;
+  padding: 2rem 3rem;
 }
 
-.new-arrival-title {
+.headline-title {
   font-size: 1rem;
   font-weight: bold;
-  padding-top: 2rem;
   padding-bottom: 0.25rem;
-  padding-left: 3rem;
 }
 
-.new-arrival-product {
+.headline-product {
   font-size: 2rem;
   font-weight: bold;
-  padding-bottom: 2rem;
-  padding-left: 3rem;
 }
 
 /* Navigation */
@@ -79,8 +74,14 @@ nav {
   background-color: firebrick;
 }
 
-.nav-container.mobile {
-  justify-content: center;
+nav .site-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-container.mobile {
+  display: block;
+  text-align: center;
 }
 
 nav a {
@@ -93,8 +94,7 @@ nav a {
 /* Main */
 main {
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 /* Products */
@@ -106,7 +106,6 @@ main {
 }
 
 .product {
-  border: 4px solid black;
   width: 30%;
 }
 
@@ -116,17 +115,17 @@ main {
   justify-content: center;
   height: 9rem;
   padding: 2rem 0;
+  border: 4px solid black;
 }
 
 .image-container img {
   display: block;
-  width: 50%;
-  height: auto;
+  max-width: 8rem;
 }
 
 .product.title {
   background-color: black;
-  width: auto;
+  width: 100%;
   padding: 0.5rem 0;
   text-align: center;
 }
@@ -144,11 +143,9 @@ main {
 }
 
 .info-title {
+  display: block;
   background-color: black;
-  padding-left: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: auto;
+  padding: 1rem 2rem;
 }
 
 .info p {
@@ -158,8 +155,8 @@ main {
 /* Footer */
 footer {
   display: flex;
-  justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: black;
   height: 5rem;
 }
@@ -167,26 +164,23 @@ footer {
 /* Media Queries */
 @media only screen and (min-width: 1024px) {
   .site-container {
-    display: flex;
     width: 960px;
   }
 
-  .nav-container.mobile {
+  .site-container.mobile {
     display: none;
   }
 }
 @media only screen and (max-width: 1024px) {
   .site-container {
-    display: flex;
     width: 100%;
   }
 
-  .nav-container.desktop {
+  .site-container.desktop {
     display: none;
   }
 
   .product {
-    border: 4px solid black;
     width: 47%;
   }
 
@@ -197,34 +191,34 @@ footer {
 
 @media only screen and (max-width: 470px) {
   .site-container {
-    display: flex;
     width: 100%;
   }
 
-  .header-main {
+  .site-container.desktop {
+    display: none;
+  }
+
+  .main-banner {
     height: 15rem;
   }
 
-  .new-arrival-content {
-    align-self: flex-start;
+  .headline {
     background-color: black;
     width: 100%;
-    margin-top: 10rem;
+    position: relative;
+    top: 10rem;
+    padding: 1rem 2rem;
   }
 
-  .new-arrival-title {
-    font-size: 0.80rem;
+  .headline-title {
+    font-size: 0.77rem;
     font-weight: bold;
-    padding-top: 1rem;
-    padding-left: 2rem;
     padding-bottom: 0.50rem;
   }
 
-  .new-arrival-product {
+  .headline-product {
     font-size: 1rem;
     font-weight: bold;
-    padding-left: 2rem;
-    padding-bottom: 1.5rem;
   }
 
   .product-grid {
